@@ -9,6 +9,7 @@ urlpatterns = [
     path('enrollments/', views.get_enrollments, name='enrollments-list'),
     path('assignments/', views.get_assignments, name='assignments-list'),
     path('submissions/', views.get_submissions, name='submissions-list'),
+
     path('add_announcement/', views.add_announcement, name='add_announcement'),
     path('add_department/', views.add_department, name='add_department'),
     path('add_instructor/', views.add_instructor, name='add_instructor'),
@@ -17,4 +18,8 @@ urlpatterns = [
     path('add_enrollment/', views.add_enrollment, name='add_enrollment'),
     path('add_assignment/', views.add_assignment, name='add_assignment'),
     path('add_submission/', views.add_submission, name='add_submission'),
+
+    path('departments/<str:department_id>/', views.delete_department, name='delete_department'),
+
+    path('departments/update/<str:department_id>/', views.update_department, name='update_department'),
 ]

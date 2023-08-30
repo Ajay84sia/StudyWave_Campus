@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from django.http import JsonResponse
+from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
 import json
 # views.py
@@ -9,10 +10,10 @@ from . import models
 
 def get_departments(request):
     departments = models.Department.objects.all()
-    
     # Convert departments to a list of dictionaries
     departments_data = [
         {
+            '_id': str(department.id),
             'DepartmentID': department.DepartmentID,
             'DepartmentName': department.DepartmentName,
         }
@@ -316,3 +317,37 @@ def add_submission(request):
             return JsonResponse({'error': str(e)}, status=400)
     else:
         return JsonResponse({'error': 'Invalid request method'}, status=405)
+
+
+@csrf_exempt
+def delete_department(request, department_id):
+    if request.method == 'DELETE':
+        try:
+            department = models.Department.objects.get(id=department_id)
+            department.delete()
+            return JsonResponse({'message': 'Department deleted successfully'}, status=200)
+        except models.Department.DoesNotExist:
+            return JsonResponse({'error': 'Department not found'}, status=404)
+    else:
+        return JsonResponse({'error': 'Invalid request method'}, status=405)
+    
+
+
+
+@require_http_methods(["PATCH"])
+@csrf_exempt
+def update_department(request, department_id):
+    try:
+        department = models.Department.objects.get(id=department_id)
+
+        data = json.loads(request.body)
+        if 'DepartmentName' in data:
+            department.DepartmentName = data['DepartmentName']
+        if 'DepartmentID' in data:
+            department.DepartmentID = data['DepartmentID']
+
+        department.save()
+        return JsonResponse({'message': 'Department updated successfully'}, status=200)
+
+    except models.Department.DoesNotExist:
+        return JsonResponse({'error': 'Department not found'}, status=404)
