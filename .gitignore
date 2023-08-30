@@ -24,6 +24,7 @@ settings_local.py
 
 # Secret keys
 *.secret_key
+Planning.md
 
 # IDE and editor specific files
 .idea/

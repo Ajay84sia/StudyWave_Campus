@@ -9,8 +9,9 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
 from pathlib import Path
+import mongoengine
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -71,15 +72,31 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Backend.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': '',  # Use 'djongo' as the engine for MongoDB
+#         'NAME': 'studyWave',  # Your MongoDB database name
+#         'CLIENT': {
+#             'host': 'mongodb+srv://ajay:Ajay84sia@cluster0.nno9uw8.mongodb.net/studyWave?retryWrites=true&w=majority',
+#             # 'username': 'ajay',
+#             # 'password': 'Ajay84sia',
+#         }
+#     }
+# }
+
+MONGO_DBNAME = 'studyWave'
+MONGO_USERNAME = 'ajay'
+MONGO_PASSWORD = 'Ajay84sia'
+MONGO_CLUSTER_NAME = 'cluster0'
+
+MONGO_URI = f'mongodb+srv://ajay:Ajay84sia@cluster0.nno9uw8.mongodb.net/studyWave?retryWrites=true&w=majority'
+
+mongoengine.connect(host=MONGO_URI, db=MONGO_DBNAME)
+
+
+
+
 
 
 # Password validation
