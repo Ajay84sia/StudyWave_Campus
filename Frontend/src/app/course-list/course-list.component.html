@@ -1,0 +1,15 @@
+<table>
+    <tr>
+      <th>Course Code</th>
+      <th>Name</th>
+      <th>Credits</th>
+      <!-- Add more headers as needed -->
+    </tr>
+    <tr *ngFor="let course of courses">
+      <td>{{ course.CourseCode }}</td>
+      <td>{{ course.Name }}</td>
+      <td>{{ course.Credits }}</td>
+      <!-- Display other properties -->
+    </tr>
+  </table>
+  

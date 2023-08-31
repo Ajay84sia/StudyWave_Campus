@@ -1,9 +1,13 @@
 from django.shortcuts import render,redirect
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
 import json
 from . import models
+
+def home(request):
+    return HttpResponse("<h1>Welcome to Study Wave Campus</h1>")
+
 
 
 #Department Views
@@ -243,7 +247,7 @@ def get_students(request):
     # Convert instructors to a list of dictionaries
     students_data = [
         {
-            '_id': str(students.id),
+            '_id': str(student.id),
             'StudentID': student.StudentID,
             'Name': student.Name,
             'Gender': student.Gender,
@@ -256,6 +260,8 @@ def get_students(request):
     ]
     
     return JsonResponse(students_data, safe=False)
+
+
 
 
 @csrf_exempt  # Disabling CSRF for demonstration purposes; you should handle CSRF properly in production
@@ -325,19 +331,23 @@ def get_courses(request):
     courses = models.Course.objects.all()
     
     # Convert announcements to a list of dictionaries
+
     courses_data = [
         {
-            '_id': str(courses.id),
+            '_id': str(course.id),
             "CourseCode": course.CourseCode,
             "Name": course.Name,
             "DepartmentID": course.DepartmentID,
             "Credits": course.Credits,
             "Description": course.Description,
             "InstructorID": course.InstructorID
-        }
+        } 
         for course in courses
     ]
+
+
     
+
     return JsonResponse(courses_data, safe=False)
 
 
