@@ -10,11 +10,16 @@ export class StudentService {
 
   constructor(private http: HttpClient) {}
 
-  getStudent(): Observable<any> {
+  getStudents(): Observable<any> {
     return this.http.get(`${this.apiUrl}students/`);
   }
 
   postStudent(studentData: any): Observable<any> {
     return this.http.post(`${this.apiUrl}add_student/`, studentData);
   }
+
+  deleteStudent(studentID: string): Observable<any> {
+    return this.http.delete(`${this.apiUrl}students/${studentID}/`);
+  }
+  
 }
