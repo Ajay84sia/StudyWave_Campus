@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StudentListComponent } from './student-list/student-list.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,7 @@ import { StudentFormComponent } from './student-form/student-form.component';
     CourseFormComponent,
     CourseListComponent,
     StudentListComponent,
-    StudentFormComponent
+    StudentFormComponent,
   ],
   imports: [
     BrowserModule,
