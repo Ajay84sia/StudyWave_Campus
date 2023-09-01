@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import {CourseService } from '../course.service';
 
 @Component({
@@ -7,7 +8,14 @@ import {CourseService } from '../course.service';
   styleUrls: ['./course-form.component.css']
 })
 export class CourseFormComponent {
-  course: any = {};
+  course: any = {
+    CourseCode: '',
+    Name: '',
+    DepartmentID:'',
+    Credits: null,
+    Description: '',
+    InstructorID:''
+  };
 
   constructor(private courseService: CourseService) {}
 

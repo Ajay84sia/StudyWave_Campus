@@ -16,4 +16,12 @@ export class CourseListComponent implements OnInit{
       this.courses = data;
     });
   }
+
+  onEditClick(courseID: string) {
+    console.log(`Edit clicked with ID: ${courseID}`);
+  }
+  
+  onDeleteClick(courseID: string) {
+    console.log(`Delete clicked with ID: ${courseID}`);
+  }
 }

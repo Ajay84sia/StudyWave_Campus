@@ -5,16 +5,16 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class CourseService {
+export class StudentService {
   private apiUrl = 'http://127.0.0.1:8000/';
 
   constructor(private http: HttpClient) {}
 
-  getCourses(): Observable<any> {
-    return this.http.get(`${this.apiUrl}courses/`);
+  getStudent(): Observable<any> {
+    return this.http.get(`${this.apiUrl}students/`);
   }
 
-  postCourse(courseData: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}add_course/`, courseData);
+  postStudent(studentData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}add_student/`, studentData);
   }
 }
