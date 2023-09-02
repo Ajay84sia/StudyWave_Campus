@@ -22,6 +22,19 @@ export class CourseListComponent implements OnInit{
   }
   
   onDeleteClick(courseID: string) {
-    console.log(`Delete clicked with ID: ${courseID}`);
+    if (confirm('Are you sure you want to delete this course?')) {
+      this.courseService.deleteCourse(courseID).subscribe(
+        (response) => {
+          console.log(`Course with ID ${courseID} deleted.`);
+          // Refresh the student list or update as needed
+          this.courseService.getCourses().subscribe((data) => {
+            this.courses = data;
+          });
+        },
+        (error) => {
+          console.error(`Error deleting course with ID ${courseID}:`, error);
+        }
+      );
+    }
   }
 }

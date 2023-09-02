@@ -26,6 +26,21 @@ def get_departments(request):
     
     return JsonResponse(departments_data, safe=False)
 
+
+def get_department(request, department_id):
+    try:
+        department = models.Department.objects.get(id=department_id)
+        department_data = {
+            '_id': str(department.id),
+            'DepartmentID': department.DepartmentID,
+            'DepartmentName': department.DepartmentName,
+        }
+        return JsonResponse( department_data, status=200)
+
+    except models.Department.DoesNotExist:
+        return JsonResponse({'error': f'Department with ID {department_id} not found'}, status=404) 
+
+
 @csrf_exempt  # Disabling CSRF for demonstration purposes; you should handle CSRF properly in production
 def add_department(request):
     if request.method == 'POST':
@@ -96,7 +111,20 @@ def get_announcements(request):
     return JsonResponse(announcements_data, safe=False)
 
 
+def get_announcement(request, announcement_id):
+    try:
+        announcement = models.Announcement.objects.get(id=announcement_id)
+        announcement_data = {
+            '_id': str(announcement.id),
+            'AnnouncementID': announcement.AnnouncementID,
+            'Title': announcement.Title,
+            'Description': announcement.Description,
+            'PublishDate': announcement.PublishDate
+        }
+        return JsonResponse( announcement_data, status=200)
 
+    except models.Department.DoesNotExist:
+        return JsonResponse({'error': f'Announcement with ID {announcement_id} not found'}, status=404) 
 
 @csrf_exempt  # Disabling CSRF for demonstration purposes; you should handle CSRF properly in production
 def add_announcement(request):
@@ -176,6 +204,24 @@ def get_instructors(request):
     ]
     
     return JsonResponse(instructors_data, safe=False)
+
+def get_instructor(request, instructor_id):
+    try:
+        instructor = models.Instructor.objects.get(id=instructor_id)
+        instructor_data = {
+            '_id': str(instructor.id),
+            'InstructorID': instructor.InstructorID,
+            'Name': instructor.Name,
+            'Gender': instructor.Gender,
+            'DoB': instructor.DoB,
+            'DepartmentID': instructor.DepartmentID,
+            'Email': instructor.Email,
+            'ContactNum': instructor.ContactNum,
+        }
+        return JsonResponse( instructor_data, status=200)
+
+    except models.Department.DoesNotExist:
+        return JsonResponse({'error': f'Instructor with ID {instructor_id} not found'}, status=404)
 
 
 @csrf_exempt  # Disabling CSRF for demonstration purposes; you should handle CSRF properly in production
@@ -262,6 +308,24 @@ def get_students(request):
     return JsonResponse(students_data, safe=False)
 
 
+def get_student(request, student_id):
+    try:
+        student = models.Student.objects.get(id=student_id)
+        student_data = {
+            '_id': str(student.id),
+            'StudentID': student.StudentID,
+            'Name': student.Name,
+            'Gender': student.Gender,
+            'DoB': student.DoB,
+            'Major': student.Major,
+            'Email': student.Email,
+            'ContactNum': student.ContactNum,
+        }
+        return JsonResponse( student_data, status=200)
+
+    except models.Department.DoesNotExist:
+        return JsonResponse({'error': f'Student with ID {student_id} not found'}, status=404)
+
 
 
 @csrf_exempt  # Disabling CSRF for demonstration purposes; you should handle CSRF properly in production
@@ -344,11 +408,29 @@ def get_courses(request):
         } 
         for course in courses
     ]
+    return JsonResponse(courses_data, safe=False)
 
 
+
+def get_course(request, course_id):
+    try:
+        course = models.Course.objects.get(id=course_id)
+        course_data = {
+            '_id': str(course.id),
+            "CourseCode": course.CourseCode,
+            "Name": course.Name,
+            "DepartmentID": course.DepartmentID,
+            "Credits": course.Credits,
+            "Description": course.Description,
+            "InstructorID": course.InstructorID
+        }
+        return JsonResponse( course_data, status=200)
+
+    except models.Department.DoesNotExist:
+        return JsonResponse({'error': f'Course with ID {course_id} not found'}, status=404)
     
 
-    return JsonResponse(courses_data, safe=False)
+    
 
 
 
@@ -430,6 +512,22 @@ def get_enrollments(request):
     return JsonResponse(enrollments_data, safe=False)
 
 
+def get_enrollment(request, enrollment_id):
+    try:
+        enrollment = models.Enrollment.objects.get(id=enrollment_id)
+        enrollment_data = {
+            '_id': str(enrollment.id),
+            'EnrollmentID': enrollment.EnrollmentID,
+            'StudentID': enrollment.StudentID,
+            'CourseCode': enrollment.CourseCode,
+            'EnrollmentDate': enrollment.EnrollmentDate
+        }
+        return JsonResponse( enrollment_data, status=200)
+
+    except models.Department.DoesNotExist:
+        return JsonResponse({'error': f'Enrollment with ID {enrollment_id} not found'}, status=404)
+
+
 @csrf_exempt  # Disabling CSRF for demonstration purposes; you should handle CSRF properly in production
 def add_enrollment(request):
     if request.method == 'POST':
@@ -503,6 +601,23 @@ def get_assignments(request):
     return JsonResponse(assignments_data, safe=False)
 
 
+def get_assignment(request, assignment_id):
+    try:
+        assignment = models.Assignment.objects.get(id=assignment_id)
+        assignment_data = {
+            '_id': str(assignment.id),
+            'AssignmentID': assignment.AssignmentID,
+            'CourseCode': assignment.CourseCode,
+            'Title': assignment.Title,
+            'Description': assignment.Description,
+            'DueDate': assignment.DueDate,
+        }
+        return JsonResponse( assignment_data, status=200)
+
+    except models.Department.DoesNotExist:
+        return JsonResponse({'error': f'Assignment with ID {assignment_id} not found'}, status=404)
+
+
 
 @csrf_exempt  # Disabling CSRF for demonstration purposes; you should handle CSRF properly in production
 def add_assignment(request):
@@ -570,6 +685,7 @@ def get_submissions(request):
             'SubmissionID': submission.SubmissionID,
             'AssignmentID': submission.AssignmentID,
             'StudentID': submission.StudentID,
+            'SubmissionLink': submission.SubmissionLink,
             'SubmissionDate': submission.SubmissionDate,
             'Status': submission.Status,
             'Remarks': submission.Remarks,
@@ -578,6 +694,25 @@ def get_submissions(request):
     ]
     
     return JsonResponse(submissions_data, safe=False)
+
+
+def get_submission(request, submission_id):
+    try:
+        submission = models.Submission.objects.get(id=submission_id)
+        submission_data = {
+            '_id': str(submission.id),
+            'SubmissionID': submission.SubmissionID,
+            'AssignmentID': submission.AssignmentID,
+            'StudentID': submission.StudentID,
+            'SubmissionLink': submission.SubmissionLink,
+            'SubmissionDate': submission.SubmissionDate,
+            'Status': submission.Status,
+            'Remarks': submission.Remarks,
+        }
+        return JsonResponse( submission_data, status=200)
+
+    except models.Department.DoesNotExist:
+        return JsonResponse({'error': f'Submission with ID {submission_id} not found'}, status=404)
 
 
 @csrf_exempt  # Disabling CSRF for demonstration purposes; you should handle CSRF properly in production
@@ -589,6 +724,7 @@ def add_submission(request):
                 SubmissionID=data['SubmissionID'],
                 AssignmentID=data['AssignmentID'],
                 StudentID=data['StudentID'],
+                SubmissionLink=data['SubmissionLink'],
                 SubmissionDate=data['SubmissionDate'],
                 Status=data['Status'],
                 Remarks=data['Remarks']
@@ -612,6 +748,8 @@ def update_submission(request, submission_id):
             submission.AssignmentID = data['AssignmentID']
         if 'StudentID' in data:
             submission.StudentID = data['StudentID']
+        if 'SubmissionLink' in data:
+            submission.SubmissionDate = data['SubmissionLink']
         if 'SubmissionDate' in data:
             submission.SubmissionDate = data['SubmissionDate']
         if 'Status' in data:

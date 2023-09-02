@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentListComponent } from './student-list/student-list.component';
 import { StudentFormComponent } from './student-form/student-form.component';
+import { InstructorFormComponent } from './instructor-form/instructor-form.component';
+import { InstructorListComponent } from './instructor-list/instructor-list.component';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { StudentFormComponent } from './student-form/student-form.component';
     CourseListComponent,
     StudentListComponent,
     StudentFormComponent,
+    InstructorFormComponent,
+    InstructorListComponent,
   ],
   imports: [
     BrowserModule,

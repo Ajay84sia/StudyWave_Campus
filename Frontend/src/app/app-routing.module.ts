@@ -5,6 +5,8 @@ import { CourseFormComponent } from './course-form/course-form.component';
 import { HomeComponent } from './home/home.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { StudentFormComponent } from './student-form/student-form.component';
+import { InstructorListComponent } from './instructor-list/instructor-list.component';
+import { InstructorFormComponent } from './instructor-form/instructor-form.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,6 +16,9 @@ const routes: Routes = [
   
   { path: 'student', component: StudentListComponent },
   { path: 'add_student', component: StudentFormComponent },
+  
+  { path: 'instructor', component: InstructorListComponent },
+  { path: 'add_instructor', component: InstructorFormComponent },
 ];
 
 @NgModule({
