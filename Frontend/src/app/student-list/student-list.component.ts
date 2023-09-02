@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../student.service';
+import { NgToastService } from 'ng-angular-popup';
 @Component({
   selector: 'app-student-list',
   templateUrl: './student-list.component.html',
@@ -11,7 +12,10 @@ export class StudentListComponent implements OnInit {
   editedStudent: any = {}; // Object to store edited data
   editedIndex: number = -1; // Index of the row being edited
 
-  constructor(private studentService: StudentService) {}
+  constructor(
+    private studentService: StudentService,
+    private toast: NgToastService
+  ) {}
 
   ngOnInit(): void {
     this.studentService.getStudents().subscribe((data) => {
@@ -35,17 +39,19 @@ export class StudentListComponent implements OnInit {
     this.editedStudent = { ...this.students[this.editedIndex] };
     // console.log(this.editedIndex, this.editedStudent._id, this.editedStudent);
 
-    this.studentService.editStudent(this.editedStudent._id, this.editedStudent).subscribe(
-      (response) => {
-        // Handle the successful response here, e.g., update the local data
-        // Example: this.students[index] = response;
-        console.log('Data updated successfully:', response);
-      },
-      (error) => {
-        // Handle any errors that occur during the PATCH request
-        console.error('Error updating data:', error);
-      }
-    );
+    this.studentService
+      .editStudent(this.editedStudent._id, this.editedStudent)
+      .subscribe(
+        (response) => {
+          // Handle the successful response here, e.g., update the local data
+          // Example: this.students[index] = response;
+          console.log('Data updated successfully:', response);
+        },
+        (error) => {
+          // Handle any errors that occur during the PATCH request
+          console.error('Error updating data:', error);
+        }
+      );
 
     // Reset edit mode
     this.editMode = false;
@@ -66,6 +72,7 @@ export class StudentListComponent implements OnInit {
         (response) => {
           console.log(`Student with ID ${studentID} deleted.`);
           // Refresh the student list or update as needed
+          this.toast.info({detail:"Delete",summary:'Student deleted Successfully',sticky:true, position: 'botomCenter'});
           this.studentService.getStudents().subscribe((data) => {
             this.students = data;
           });

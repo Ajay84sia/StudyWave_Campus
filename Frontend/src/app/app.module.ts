@@ -15,6 +15,7 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { InstructorFormComponent } from './instructor-form/instructor-form.component';
 import { InstructorListComponent } from './instructor-list/instructor-list.component';
+import { NgToastModule } from 'ng-angular-popup';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { InstructorListComponent } from './instructor-list/instructor-list.compo
     FormsModule,
     RouterModule,
     HttpClientModule,
+    NgToastModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
