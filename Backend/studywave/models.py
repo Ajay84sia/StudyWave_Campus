@@ -36,7 +36,7 @@ class Student(Document):
     DoB = StringField(max_length=50)
     Major = StringField(max_length=50)
     Email = StringField(max_length=50)
-    ContactNum = FloatField(max_length=50)
+    ContactNum = StringField(max_length=50)
 
 class Enrollment(Document):
     EnrollmentID = StringField(max_length=50)
