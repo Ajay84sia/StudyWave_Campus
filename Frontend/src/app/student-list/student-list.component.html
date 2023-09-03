@@ -26,7 +26,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let student of students; let i = index">
+        <tr *ngFor="let student of students; let i = index" class="{{ i % 2 === 0 ? 'bg-gray-100' : 'bg-white' }}">
           <td class="p-2 border border-gray-400 text-center">{{ i + 1 }}.</td>
           <td class="p-2 border border-gray-400 text-center">
             <input

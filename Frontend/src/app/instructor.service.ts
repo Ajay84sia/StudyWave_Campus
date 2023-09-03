@@ -16,6 +16,7 @@ export class InstructorService {
   }
 
   postInstructor(instructorData: any): Observable<any> {
+    console.log("service" , instructorData)
     return this.http.post(`${this.apiUrl}add_instructor/`, instructorData);
   }
 

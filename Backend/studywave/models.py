@@ -19,13 +19,13 @@ class Instructor(Document):
     DoB = StringField(max_length=50)
     DepartmentID = StringField(max_length=50)
     Email = StringField(max_length=50)
-    ContactNum = FloatField(max_length=50)
+    ContactNum = StringField(max_length=50)
 
 class Course(Document):
     CourseCode = StringField(max_length=50)
     Name = StringField(max_length=50)
     DepartmentID = StringField(max_length=50)
-    Credits = FloatField(max_length=50)
+    Credits = StringField(max_length=50)
     Description = StringField(max_length=50)
     InstructorID = StringField(max_length=50)
 
@@ -62,3 +62,4 @@ class Submission(Document):
 
 
  
+    

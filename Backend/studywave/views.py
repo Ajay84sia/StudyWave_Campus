@@ -464,6 +464,8 @@ def update_course(request, course_id):
         data = json.loads(request.body)
         if 'Name' in data:
             course.Name = data['Name']
+        if 'CourseCode' in data:
+            course.CourseCode = data['CourseCode']
         if 'DepartmentID' in data:
             course.DepartmentID = data['DepartmentID']
         if 'Credits' in data:
