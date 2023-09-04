@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '@auth0/auth0-angular';
+import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ import { AuthService } from '@auth0/auth0-angular';
 export class HomeComponent {
   isLoggedIn = false;
 
-  constructor(private auth: AuthService, private router : Router) {}
+  constructor(private auth: AuthService, private router : Router, private toast : NgToastService) {}
 
   ngOnInit(): void {
     this.auth.isAuthenticated$.subscribe((isAuthenticated) => {
@@ -18,6 +19,7 @@ export class HomeComponent {
       localStorage.setItem("isLoggedIn", "true");
       if(isAuthenticated){
         this.router.navigate(['/dashboard']);
+        this.toast.success({detail:"SUCCESS",summary:'Logged In Successfully',duration:2000, position:'botomCenter'});
       }else{
         this.router.navigate(['/']);
       }
