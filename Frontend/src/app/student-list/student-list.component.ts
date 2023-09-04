@@ -46,6 +46,7 @@ export class StudentListComponent implements OnInit {
           // Handle the successful response here, e.g., update the local data
           // Example: this.students[index] = response;
           console.log('Data updated successfully:', response);
+          this.toast.info({detail:"Update",summary:'Student data updated Successfully',sticky:true, position: 'botomCenter'});
         },
         (error) => {
           // Handle any errors that occur during the PATCH request
@@ -72,7 +73,7 @@ export class StudentListComponent implements OnInit {
         (response) => {
           console.log(`Student with ID ${studentID} deleted.`);
           // Refresh the student list or update as needed
-          this.toast.info({detail:"Delete",summary:'Student deleted Successfully',sticky:true, position: 'botomCenter'});
+          this.toast.warning({detail:"Delete",summary:'Student deleted Successfully',sticky:true, position: 'botomCenter'});
           this.studentService.getStudents().subscribe((data) => {
             this.students = data;
           });

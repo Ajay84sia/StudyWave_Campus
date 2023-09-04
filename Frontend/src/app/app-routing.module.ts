@@ -7,22 +7,25 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { InstructorListComponent } from './instructor-list/instructor-list.component';
 import { InstructorFormComponent } from './instructor-form/instructor-form.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
 
+  { path: 'dashboard', component: DashboardComponent },
+
   { path: 'course', component: CourseListComponent },
   { path: 'add_course', component: CourseFormComponent },
-  
+
   { path: 'student', component: StudentListComponent },
   { path: 'add_student', component: StudentFormComponent },
-  
+
   { path: 'instructor', component: InstructorListComponent },
   { path: 'add_instructor', component: InstructorFormComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

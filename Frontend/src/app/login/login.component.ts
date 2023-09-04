@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
+import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-login',
@@ -7,4 +8,10 @@ import { AuthService } from '@auth0/auth0-angular';
 })
 export class LoginComponent {
   constructor(public auth: AuthService) {}
+
+
+  login(){
+    this.auth.loginWithRedirect();
+  }
+
 }
