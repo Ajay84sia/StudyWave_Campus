@@ -18,7 +18,7 @@
 | <img width="75px" src="https://cdn.freebiesupply.com/logos/large/2x/angular-icon-logo-png-transparent.png">  | <img width="75px" src="https://img.icons8.com/fluency/452/typescript--v2.png">  | <img width="70px" src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_tailwind_icon_130128.png"> | <img width="70px" src="https://cdn.icon-icons.com/icons2/2699/PNG/128/auth_logo_icon_169534.png"> |
 
 
-### Backend
+### Backend & Database
 
 | Python                                                                                                                                                                                                                                                                                                                                                      | Django                                                                                                                            | MongoDB                                                                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
