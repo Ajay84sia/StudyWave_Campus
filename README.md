@@ -28,9 +28,14 @@
 ## Frontend Screenshots 📷
 ---
 
-# HomePage
+# Home Page
 ![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/181cade7-0f2e-431f-9da7-715c0ac6773c)
 
+# Login Page
+![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/f77dc2ac-d747-48ea-9cbe-ea422733bfff)
+
+# Students Listing Page
+![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/31e2f958-df25-4049-bd0e-b46d4cf56d0d)
 
 ## **API Endpoints**
 
