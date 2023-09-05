@@ -7,7 +7,7 @@
 
 ## **Frontend Deployed URL** 👉 (https://study-wave-campus.netlify.app/)
 
-## **Backend Deployed URL** 👉 (https://study-wave-campus.netlify.app/](https://study-wave-backend.vercel.app/)
+## **Backend Deployed URL** 👉 (https://study-wave-backend.vercel.app/)
 
 ## 🏷️ Tech Stack Used:-
 
