@@ -24,6 +24,13 @@
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | <img width="75px" src="https://th.bing.com/th/id/R.a81ec894994b107448ec84f07feb0b6f?rik=AGEVK6UyAjUuPQ&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2fpython-logo-transparent%2fpython-logo-transparent-9.png&ehk=CDexlAZjyQXRqtsTUdrBS2HDF%2fTK%2fcsRifoPtWrK2Es%3d&risl=&pid=ImgRaw&r=0">  | <img width="75px" src="https://juststickers.in/wp-content/uploads/2019/07/django-shapecut.png"> | <img width="75px" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/256/external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo.png"> |
 
+---
+## Frontend Screenshots 📷
+---
+
+# HomePage
+![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/181cade7-0f2e-431f-9da7-715c0ac6773c)
+
 
 ## **API Endpoints**
 
