@@ -61,11 +61,11 @@ export class InstructorListComponent implements OnInit {
   }
 
   
-  onDeleteClick(courseID: string) {
-    if (confirm('Are you sure you want to delete this course?')) {
-      this.instructorService.deleteInstructor(courseID).subscribe(
+  onDeleteClick(instructorID: string) {
+    if (confirm('Are you sure you want to delete this instructor?')) {
+      this.instructorService.deleteInstructor(instructorID).subscribe(
         (response) => {
-          console.log(`Course with ID ${courseID} deleted.`);
+          console.log(`Instructor with ID ${instructorID} deleted.`);
           // Refresh the student list or update as needed
           this.toast.warning({detail:"Delete",summary:'Instructor deleted Successfully',duration:2000, position: 'botomCenter'});
           this.instructorService.getInstructors().subscribe((data) => {
@@ -73,7 +73,7 @@ export class InstructorListComponent implements OnInit {
           });
         },
         (error) => {
-          console.error(`Error deleting course with ID ${courseID}:`, error);
+          console.error(`Error deleting Instructor with ID ${instructorID}:`, error);
         }
       );
     }

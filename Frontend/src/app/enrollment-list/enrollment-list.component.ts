@@ -62,11 +62,11 @@ export class EnrollmentListComponent implements OnInit{
   }
 
   
-  onDeleteClick(courseID: string) {
-    if (confirm('Are you sure you want to delete this course?')) {
-      this.enrollmentService.deleteEnrollment(courseID).subscribe(
+  onDeleteClick(enrollmentID: string) {
+    if (confirm('Are you sure you want to delete this Enrollment?')) {
+      this.enrollmentService.deleteEnrollment(enrollmentID).subscribe(
         (response) => {
-          console.log(`Course with ID ${courseID} deleted.`);
+          console.log(`Enrollment with ID ${enrollmentID} deleted.`);
           // Refresh the student list or update as needed
           this.toast.warning({detail:"Delete",summary:'Enrollment deleted Successfully',duration:2000, position: 'botomCenter'});
           this.enrollmentService.getEnrollments().subscribe((data) => {
@@ -74,7 +74,7 @@ export class EnrollmentListComponent implements OnInit{
           });
         },
         (error) => {
-          console.error(`Error deleting course with ID ${courseID}:`, error);
+          console.error(`Error deleting Enrollment with ID ${enrollmentID}:`, error);
         }
       );
     }

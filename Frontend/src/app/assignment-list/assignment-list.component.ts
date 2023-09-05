@@ -70,7 +70,7 @@ export class AssignmentListComponent implements OnInit {
   }
 
   onDeleteClick(assignmentID: string) {
-    if (confirm('Are you sure you want to delete this course?')) {
+    if (confirm('Are you sure you want to delete this assignment?')) {
       this.assignmentService.deleteAssignment(assignmentID).subscribe(
         (response) => {
           console.log(`Assignment with ID ${assignmentID} deleted.`);

@@ -61,11 +61,11 @@ export class SubmissionListComponent implements OnInit {
   }
 
   
-  onDeleteClick(courseID: string) {
-    if (confirm('Are you sure you want to delete this course?')) {
-      this.submissionService.deleteSubmission(courseID).subscribe(
+  onDeleteClick(submissionID: string) {
+    if (confirm('Are you sure you want to delete this submission?')) {
+      this.submissionService.deleteSubmission(submissionID).subscribe(
         (response) => {
-          console.log(`Course with ID ${courseID} deleted.`);
+          console.log(`Submission with ID ${submissionID} deleted.`);
           // Refresh the student list or update as needed
           this.toast.warning({detail:"Delete",summary:'Submission deleted Successfully',duration:2000, position: 'botomCenter'});
           this.submissionService.getSubmissions().subscribe((data) => {
@@ -73,7 +73,7 @@ export class SubmissionListComponent implements OnInit {
           });
         },
         (error) => {
-          console.error(`Error deleting course with ID ${courseID}:`, error);
+          console.error(`Error deleting Submission with ID ${submissionID}:`, error);
         }
       );
     }
