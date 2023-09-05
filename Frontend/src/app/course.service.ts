@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CourseService {
-  private apiUrl = 'http://127.0.0.1:8000/';
+  private apiUrl = 'https://study-wave-backend.vercel.app/';
 
   constructor(private http: HttpClient) {}
 

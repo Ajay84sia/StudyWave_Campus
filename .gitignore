@@ -40,3 +40,5 @@ Planning.md
 # Mac OS specific files
 .DS_Store
 .vercel
+# Local Netlify folder
+.netlify
