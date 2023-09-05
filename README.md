@@ -1,4 +1,4 @@
-## 🏷️ About StudyWave Campus?
+## 🏷️ About StudyWave Campus
 
 > Study Wave Campus is a comprehensive Learning Management System that provides secure authentication and efficient administration. This project aimed to develop a platform that facilitates seamless learning and management processes, meeting the demands of modern educational environments.
 ---
@@ -62,3 +62,35 @@
 - **`POST /api/add_enrollment/`** - Insert new enrollment details.
 - **`PATCH /api/enrollments/update/:id`** - Update enrollment details.
 - **`DELETE /api/enrollments/:id`** -Delete enrollment details.
+
+### **Assignments**
+
+- **`GET /api/assignments/`** - Retrieve all assignments.
+- **`GET /api/assignment/:id/`** - Retrieve single assignment details.
+- **`POST /api/add_assignment/`** - Insert new assignment details.
+- **`PATCH /api/assignments/update/:id`** - Update assignment details.
+- **`DELETE /api/assignments/:id`** -Delete assignment details.
+
+### **Submissions**
+
+- **`GET /api/submissions/`** - Retrieve all submissions.
+- **`GET /api/submission/:id/`** - Retrieve single submission details.
+- **`POST /api/add_submission/`** - Insert new submission details.
+- **`PATCH /api/submissions/update/:id`** - Update submission details.
+- **`DELETE /api/submissions/:id`** -Delete submission details.
+
+### **Departments**
+
+- **`GET /api/departments/`** - Retrieve all departments.
+- **`GET /api/department/:id/`** - Retrieve single department details.
+- **`POST /api/add_department/`** - Insert new department details.
+- **`PATCH /api/departments/update/:id`** - Update department details.
+- **`DELETE /api/departments/:id`** -Delete department details.
+
+### **Announcements**
+
+- **`GET /api/announcements/`** - Retrieve all announcements.
+- **`GET /api/announcement/:id/`** - Retrieve single announcement details.
+- **`POST /api/add_announcement/`** - Insert new announcement details.
+- **`PATCH /api/announcements/update/:id`** - Update announcement details.
+- **`DELETE /api/announcements/:id`** -Delete announcement details.
