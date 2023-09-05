@@ -23,3 +23,28 @@
 | Python                                                                                                                                                                                                                                                                                                                                                      | Django                                                                                                                            | MongoDB                                                                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | <img width="75px" src="https://th.bing.com/th/id/R.a81ec894994b107448ec84f07feb0b6f?rik=AGEVK6UyAjUuPQ&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2fpython-logo-transparent%2fpython-logo-transparent-9.png&ehk=CDexlAZjyQXRqtsTUdrBS2HDF%2fTK%2fcsRifoPtWrK2Es%3d&risl=&pid=ImgRaw&r=0">  | <img width="75px" src="https://juststickers.in/wp-content/uploads/2019/07/django-shapecut.png"> | <img width="75px" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/256/external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo.png"> |
+
+
+## **API Endpoints**
+
+### **Authentication**
+
+- **`Auth0`** - Authentication is done using Auth0.
+
+### **Students**
+
+- **`GET /api/students/`** - Retrieve all students.
+- **`GET /api/student/:id/`** - Retrieve single student details.
+- **`POST /api/add_student/`** - Insert new student details.
+- **`PATCH /api/students/update/:id`** - Update student details.
+- **`DELETE /api/students/:id`** -Delete student details.
+
+### **Instructors**
+
+- **`GET /api/instructors/`** - Retrieve all instructors.
+- **`GET /api/instructor/:id/`** - Retrieve single instructor details.
+- **`POST /api/add_instructor/`** - Insert new instructor details.
+- **`PATCH /api/instructors/update/:id`** - Update instructor details.
+- **`DELETE /api/instructors/:id`** -Delete instructor details.
+
+
