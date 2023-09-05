@@ -751,7 +751,7 @@ def update_submission(request, submission_id):
         if 'StudentID' in data:
             submission.StudentID = data['StudentID']
         if 'SubmissionLink' in data:
-            submission.SubmissionDate = data['SubmissionLink']
+            submission.SubmissionLink = data['SubmissionLink']
         if 'SubmissionDate' in data:
             submission.SubmissionDate = data['SubmissionDate']
         if 'Status' in data:
