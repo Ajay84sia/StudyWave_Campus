@@ -47,4 +47,18 @@
 - **`PATCH /api/instructors/update/:id`** - Update instructor details.
 - **`DELETE /api/instructors/:id`** -Delete instructor details.
 
+### **Courses**
 
+- **`GET /api/courses/`** - Retrieve all courses.
+- **`GET /api/course/:id/`** - Retrieve single course details.
+- **`POST /api/add_course/`** - Insert new course details.
+- **`PATCH /api/courses/update/:id`** - Update course details.
+- **`DELETE /api/courses/:id`** -Delete course details.
+
+### **Enrollments**
+
+- **`GET /api/enrollments/`** - Retrieve all enrollments.
+- **`GET /api/enrollment/:id/`** - Retrieve single enrollment details.
+- **`POST /api/add_enrollment/`** - Insert new enrollment details.
+- **`PATCH /api/enrollments/update/:id`** - Update enrollment details.
+- **`DELETE /api/enrollments/:id`** -Delete enrollment details.
