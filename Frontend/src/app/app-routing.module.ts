@@ -12,11 +12,12 @@ import { EnrollmentListComponent } from './enrollment-list/enrollment-list.compo
 import { AssignmentListComponent } from './assignment-list/assignment-list.component';
 import { AssignmentFormComponent } from './assignment-form/assignment-form.component';
 import { SubmissionListComponent } from './submission-list/submission-list.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
 
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard', component: SidebarComponent },
 
   { path: 'course', component: CourseListComponent },
   { path: 'add_course', component: CourseFormComponent },

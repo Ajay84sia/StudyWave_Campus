@@ -25,6 +25,9 @@ import { EnrollmentListComponent } from './enrollment-list/enrollment-list.compo
 import { AssignmentListComponent } from './assignment-list/assignment-list.component';
 import { AssignmentFormComponent } from './assignment-form/assignment-form.component';
 import { SubmissionListComponent } from './submission-list/submission-list.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { NgChartsModule } from 'ng2-charts';
+import { BarchartComponent } from './barchart/barchart.component';
 
 
 @NgModule({
@@ -47,6 +50,8 @@ import { SubmissionListComponent } from './submission-list/submission-list.compo
     AssignmentListComponent,
     AssignmentFormComponent,
     SubmissionListComponent,
+    SidebarComponent,
+    BarchartComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +60,7 @@ import { SubmissionListComponent } from './submission-list/submission-list.compo
     RouterModule,
     HttpClientModule,
     NgToastModule,
+    NgChartsModule,
     AuthModule.forRoot({
       domain: 'tackle-and-trail.us.auth0.com',
       clientId: '1jhMSbnsaRklQpsuVHQwItiGfv7rKX8I',

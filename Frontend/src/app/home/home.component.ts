@@ -9,7 +9,7 @@ import { NgToastService } from 'ng-angular-popup';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  isLoggedIn = false;
+  isLoggedIn = true;
 
   constructor(private auth: AuthService, private router : Router, private toast : NgToastService) {}
 
