@@ -29,13 +29,43 @@
 ---
 
 # Home Page
-![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/181cade7-0f2e-431f-9da7-715c0ac6773c)
+![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/eb18fc55-3ef7-454f-8746-df95338b7b0c)
 
 # Login Page
-![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/f77dc2ac-d747-48ea-9cbe-ea422733bfff)
+![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/02a7c667-19ef-4970-8a96-31d1948fd5ce)
+
+# Dashboard
+![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/851dece7-cf64-478e-bbf4-6c438aa93f98)
 
 # Students Listing Page
-![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/31e2f958-df25-4049-bd0e-b46d4cf56d0d)
+![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/554857a6-ad82-4131-9792-2fd3fef38916)
+
+# Student Registration Page
+![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/646ffb4d-5fba-4c7e-8b96-cde5c45c354e)
+
+# Instructors Listing Page
+![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/246eaeac-2288-4d07-b01f-2f92ec84c2e0)
+
+# Instructor Registration Page
+![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/73500525-5754-4fc1-a9d9-91bb6da00bf7)
+
+# Courses Listing Page
+![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/b50eeb25-92c8-4641-9e45-7e1615671422)
+
+# Course Form Page
+![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/a34295b9-6886-48e7-9214-111d4b5ec608)
+
+# Enrollment Listing Page
+![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/cd1e05a5-92fd-4990-ad58-e22e2ee2cef0)
+
+# Assignment Listing Page
+![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/e70c467c-da09-4aa2-b107-dbc1ee2ff84b)
+
+# Add New Assignment Page
+![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/6b9c1afb-0bee-4d2a-a1ab-5fef7697569a)
+
+# Submission Listing Page
+![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/e95f8222-ae88-45d4-afae-d378059c5414)
 
 ## **API Endpoints**
 
