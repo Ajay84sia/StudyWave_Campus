@@ -16,8 +16,8 @@ export class BarchartComponent {
     labels: [ '2017', '2018', '2019', '2020', '2021', '2022', '2023' ],
     datasets: [
       { data: [ 65, 59, 80, 81, 56, 55, 40 ], label: 'Students' },
-      { data: [ 28, 48, 40, 19, 86, 27, 90 ], label: 'Instructors' },
-      { data: [ 28, 48, 40, 19, 86, 27, 90 ], label: 'Courses' }
+      { data: [ 28, 48, 40, 19, 86, 27, 80 ], label: 'Instructors' },
+      { data: [ 18, 28, 30, 19, 56, 37, 50 ], label: 'Courses' }
     ]
   };
 

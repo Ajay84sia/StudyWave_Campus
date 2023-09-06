@@ -32,7 +32,7 @@ export class SidebarComponent implements OnInit{
     });
 
     this.courseService.getCourses().subscribe(data => {
-      this.courseLength = data;
+      this.courseLength = data.length;
     });
   }
 }
