@@ -29,43 +29,56 @@
 ---
 
 # Home Page
-![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/eb18fc55-3ef7-454f-8746-df95338b7b0c)
+![Screenshot 2023-09-06 161613](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/78853c9a-7301-4299-8463-be350b8e9fcc)
+
 
 # Login Page
-![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/02a7c667-19ef-4970-8a96-31d1948fd5ce)
+![Screenshot 2023-09-06 161658](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/632d2363-0a83-4a31-8760-4ccb11c04c23)
+
 
 # Dashboard
-![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/851dece7-cf64-478e-bbf4-6c438aa93f98)
+![Screenshot 2023-09-06 161757](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/d9d5e7ef-9c3c-445d-8c3c-2b94d52bcd31)
+
 
 # Students Listing Page
-![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/554857a6-ad82-4131-9792-2fd3fef38916)
+![Screenshot 2023-09-06 161825](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/af4a5146-b4e0-4b7d-9a21-35c96df22365)
+
 
 # Student Registration Page
-![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/646ffb4d-5fba-4c7e-8b96-cde5c45c354e)
+![Screenshot 2023-09-06 161857](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/bb2527f8-f097-4549-9262-29c9af825880)
+
 
 # Instructors Listing Page
-![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/246eaeac-2288-4d07-b01f-2f92ec84c2e0)
+![Screenshot 2023-09-06 161950](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/8a61df14-e7cb-4728-8222-a24d6dc367a4)
+
 
 # Instructor Registration Page
-![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/73500525-5754-4fc1-a9d9-91bb6da00bf7)
+![Screenshot 2023-09-06 162039](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/26245726-6c1c-40ba-a0a0-b17e5474fd85)
+
 
 # Courses Listing Page
-![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/b50eeb25-92c8-4641-9e45-7e1615671422)
+![Screenshot 2023-09-06 162157](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/b798d6e8-53ca-49ab-95ce-11499b0f5c8a)
+
 
 # Course Form Page
-![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/a34295b9-6886-48e7-9214-111d4b5ec608)
+![Screenshot 2023-09-06 162217](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/1918009f-0397-4f22-8e9b-b155cd8f217e)
+
 
 # Enrollment Listing Page
-![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/cd1e05a5-92fd-4990-ad58-e22e2ee2cef0)
+![Screenshot 2023-09-06 162239](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/f0bbf514-beec-4e2e-ab5a-f5a56fea15b6)
+
 
 # Assignment Listing Page
-![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/e70c467c-da09-4aa2-b107-dbc1ee2ff84b)
+![Screenshot 2023-09-06 162335](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/df90a754-4b04-42b5-8422-e91fbc8321f1)
+
 
 # Add New Assignment Page
-![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/6b9c1afb-0bee-4d2a-a1ab-5fef7697569a)
+![Screenshot 2023-09-06 162420](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/247a249d-df79-4282-af16-f7edfe61cc58)
+
 
 # Submission Listing Page
-![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/e95f8222-ae88-45d4-afae-d378059c5414)
+![Screenshot 2023-09-06 162441](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/7884593c-c158-4589-a2ac-18c8459f78db)
+
 
 ## **API Endpoints**
 
