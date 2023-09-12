@@ -29,7 +29,8 @@
 ---
 
 # Home Page
-![Screenshot 2023-09-06 161613](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/78853c9a-7301-4299-8463-be350b8e9fcc)
+<!-- ![Screenshot 2023-09-06 161613](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/78853c9a-7301-4299-8463-be350b8e9fcc) -->
+![image](https://github.com/Ajay84sia/StudyWave_Campus/assets/98752820/e17735ed-9496-40f1-96c3-e917a590862e)
 
 
 # Login Page
